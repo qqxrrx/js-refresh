@@ -1,0 +1,12 @@
+javascript refresher
+- fundamentals
+- dom manipulation
+- data structures
+- functions
+- arrays
+- types
+- advanced dom
+- oop concepts
+- asynchronous
+- tooling
+- latest 2022 features
