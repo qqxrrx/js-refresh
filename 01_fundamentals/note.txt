@@ -12,6 +12,8 @@ ECMAscript:
 - ES5
 - ES6/ES2015
 ...
-- ES11/2020
+- ES13/ES2022
 
 ES6 ~ ES11 = modern javascript
+
+external javascript files are better than inline code
