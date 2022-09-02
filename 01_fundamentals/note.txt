@@ -1,0 +1,17 @@
+javascript:
+  high-level, object oriented multi-paradigm programming language
+
+role of js:
+  logical actions, dynamic effects for the web
+  made modern web possible
+  required to master it before moving on js frameworks (react, angular, vue, etc.)
+  web, desktop, mobile
+
+
+ECMAscript:
+- ES5
+- ES6/ES2015
+...
+- ES11/2020
+
+ES6 ~ ES11 = modern javascript
