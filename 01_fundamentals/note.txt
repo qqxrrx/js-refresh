@@ -33,3 +33,20 @@ Primitive data types:
 
 js is dynamic, data types are automatically determined when value is stored
 value has type and not the variable
+
+
+declaration of variables
+  var = old way of declaring, avoid it
+      = the same with let
+      = function scoped
+
+  let = declare variables that can change later, during execution
+      = reassign value or "mutate" the variable
+      = only use if it will change in the future
+      = block scoped
+
+  const = value remains constant, can't be changed
+        = "immutable", can't declare empty const variables they need initial value
+        = use by default
+
+  bad practice = not declaring using let and const, because it will be declared globally
