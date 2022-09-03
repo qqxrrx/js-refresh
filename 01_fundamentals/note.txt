@@ -17,3 +17,47 @@ ECMAscript:
 ES6 ~ ES11 = modern javascript
 
 external javascript files are better than inline code
+
+
+in js values are either an Object or a Primitive
+
+Primitive data types:
+  Number: or floating point numbers (decimals, integers)
+  String: sequence of characters (text)
+  Boolean: logical only true or false, taking decisions
+  Undefined: not yet defined or not yet initialized
+  Null: empty value
+  Symbol: unique value that cannot be changed
+  BigInt: large integers too large for Number type
+
+
+js is dynamic, data types are automatically determined when value is stored
+value has type and not the variable
+
+
+declaration of variables
+  var = old way of declaring, avoid it
+      = the same with let
+      = function scoped
+
+  let = declare variables that can change later, during execution
+      = reassign value or "mutate" the variable
+      = only use if it will change in the future
+      = block scoped
+
+  const = value remains constant, can't be changed
+        = "immutable", can't declare empty const variables they need initial value
+        = use by default
+
+  bad practice = not declaring using let and const, because it will be declared globally
+
+
+
+operators = allow to transform values
+  mathematical/arithmetic (*,/,+,-, %, **)
+  assignment (=, *=, /=, +=, -=, %=, **=)
+  comparison/relational (>, <, >=, <=)
+  equality (!=, ==, !==, ===)
+  logical (&&, ||, ??)
+
+  operator precedence matters, js will follow the rules of precedence
