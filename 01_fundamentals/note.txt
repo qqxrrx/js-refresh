@@ -17,3 +17,19 @@ ECMAscript:
 ES6 ~ ES11 = modern javascript
 
 external javascript files are better than inline code
+
+
+in js values are either an Object or a Primitive
+
+Primitive data types:
+  Number: or floating point numbers (decimals, integers)
+  String: sequence of characters (text)
+  Boolean: logical only true or false, taking decisions
+  Undefined: not yet defined or not yet initialized
+  Null: empty value
+  Symbol: unique value that cannot be changed
+  BigInt: large integers too large for Number type
+
+
+js is dynamic, data types are automatically determined when value is stored
+value has type and not the variable
