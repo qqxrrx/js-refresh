@@ -50,3 +50,14 @@ declaration of variables
         = use by default
 
   bad practice = not declaring using let and const, because it will be declared globally
+
+
+
+operators = allow to transform values
+  mathematical/arithmetic (*,/,+,-, %, **)
+  assignment (=, *=, /=, +=, -=, %=, **=)
+  comparison/relational (>, <, >=, <=)
+  equality (!=, ==, !==, ===)
+  logical (&&, ||, ??)
+
+  operator precedence matters, js will follow the rules of precedence
