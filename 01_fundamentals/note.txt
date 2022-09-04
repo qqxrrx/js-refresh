@@ -65,3 +65,7 @@ operators = allow to transform values
 
 
 if/else = control structure
+
+
+type conversion = manually convert types (explicitly, shown)
+type coercion = js automatically converts types (implicitly, hidden)
