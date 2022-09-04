@@ -61,3 +61,4 @@ operators = allow to transform values
   logical (&&, ||, ??)
 
   operator precedence matters, js will follow the rules of precedence
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
