@@ -62,3 +62,10 @@ operators = allow to transform values
 
   operator precedence matters, js will follow the rules of precedence
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
+
+
+if/else = control structure
+
+
+type conversion = manually convert types (explicitly, shown)
+type coercion = js automatically converts types (implicitly, hidden)
