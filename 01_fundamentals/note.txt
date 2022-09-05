@@ -121,3 +121,7 @@ statements vs expressions
 
 expression: code that produces a value (string, number, boolean)
 statement: executed as an action and not produce value by itself (if-else)
+
+conditional (ternary) operator ?:
+  (expr) ? (true result) : (false result)
+  an operator produces a value therefore an expression and NOT a statement
