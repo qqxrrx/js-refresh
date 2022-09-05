@@ -76,3 +76,11 @@ type coercion = js automatically converts types (implicitly, hidden)
   undefined (uninitialized)
   null (null value)
   NaN (not a number)
+
+
+
+== vs ===
+
+== : (loose equality operator) type coercion executed
+      BUG PRONE, AVOID
+=== : (strict equality operator) NO type coercion
