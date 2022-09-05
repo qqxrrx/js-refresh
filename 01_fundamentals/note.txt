@@ -108,3 +108,10 @@ Boolean Logic
     NOT true is false
     NOT false is true
     note = NOT (!) has higher precedence than AND / OR... will reverse value first
+
+
+logical operators in js
+
+AND = &&
+OR = ||
+NOT = !

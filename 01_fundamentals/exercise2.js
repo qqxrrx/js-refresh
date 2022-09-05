@@ -1,3 +1,5 @@
+//exercise2: BMI comparison (improved)
+
 const markMass_td1 = 78
 const markHeight_td1 = 1.69
 const johnMass_td1 = 92
