@@ -84,3 +84,27 @@ type coercion = js automatically converts types (implicitly, hidden)
 == : (loose equality operator) type coercion executed
       BUG PRONE, AVOID
 === : (strict equality operator) NO type coercion
+
+
+
+Boolean Logic
+
+  truth tables (AND, OR, NOT)
+  https://en.wikipedia.org/wiki/Truth_table
+
+  AND (need all true to make it true)
+    true AND true is true
+    true AND false is false
+    false AND true is false
+    false AND false is false
+
+  OR (only need one true to make it true)
+    true OR true is true
+    true OR false is true
+    false OR true is true
+    false OR false is false
+
+  NOT (reverse value of boolean)
+    NOT true is false
+    NOT false is true
+    note = NOT (!) has higher precedence than AND / OR... will reverse value first
