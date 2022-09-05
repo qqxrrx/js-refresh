@@ -69,3 +69,10 @@ if/else = control structure
 
 type conversion = manually convert types (explicitly, shown)
 type coercion = js automatically converts types (implicitly, hidden)
+
+5 falsy values in js:
+  0 (zero)
+  '' (empty string)
+  undefined (uninitialized)
+  null (null value)
+  NaN (not a number)
