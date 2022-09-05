@@ -115,3 +115,9 @@ logical operators in js
 AND = &&
 OR = ||
 NOT = !
+
+
+statements vs expressions
+
+expression: code that produces a value (string, number, boolean)
+statement: executed as an action and not produce value by itself (if-else)
