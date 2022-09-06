@@ -1,0 +1,13 @@
+strict mode
+  special mode in js to allow us to use secure code
+  avoid accidental bugs
+  forbids doing certain things
+  create visible errors
+  'use strict' at beginning of file
+
+
+function
+  a grouped piece of code that can be reused
+  can receive and return data back
+  parameter = variables inside function
+  argument = value passed on function parameter when called/invoked/runned
