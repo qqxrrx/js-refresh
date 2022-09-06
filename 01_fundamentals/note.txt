@@ -125,3 +125,23 @@ statement: executed as an action and not produce value by itself (if-else)
 conditional (ternary) operator ?:
   (expr) ? (true result) : (false result)
   an operator produces a value therefore an expression and NOT a statement
+
+
+ES5, ES6/ES2015, ESNext
+
+https://en.wikipedia.org/wiki/ECMAScript
+
+ECMAScript 1 (ES1) = official standard for JavaScript, 1997
+ECMAScript 5 (ES5) = new great features, 2009
+ECMAScript 2015 (ES6/ES2015) = new update, 2015
+  annual release cycle (every june)
+
+modern javascript has backwards compatibility
+
+during development = use latest browser
+during deployment = use babel to transpile and polyfill to ensure compatibility across older versions of browsers
+
+https://kangax.github.io/compat-table/es6/
+
+ESNext = future versions of the language (new feature proposals that reach Stage 4)
+       = browsers will start implementing at Stage 3
