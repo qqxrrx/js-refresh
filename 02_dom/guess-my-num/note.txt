@@ -1,0 +1,6 @@
+document object model (DOM)
+  - structured representation of html documents
+  - allow js to access html elements and styles to manipulate them
+  - is not javascript (not part of js, js is just ecmascript)
+  - part of webapi that is implemented by browsers
+  - there is a dom specification (https://dom.spec.whatwg.org)
