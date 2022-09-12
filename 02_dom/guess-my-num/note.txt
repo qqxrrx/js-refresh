@@ -4,3 +4,8 @@ document object model (DOM)
   - is not javascript (not part of js, js is just ecmascript)
   - part of webapi that is implemented by browsers
   - there is a dom specification (https://dom.spec.whatwg.org)
+
+
+refactor:
+  change structure of code without changing it's behavior
+  to remove duplicate code
