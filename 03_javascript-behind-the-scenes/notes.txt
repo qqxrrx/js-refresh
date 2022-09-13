@@ -68,11 +68,14 @@ javascript engine
   call stack
     where code is queued and executed via "execution context"
 
+
 compilation
   source code is compiled into portable machine code (dependent on the target architecture), FAST
 
+
 interpretation
   runs through source code and executes it line by line (converted to machine code first before executed), SLOW
+
 
 modern js engines
   - use both compilation and interpretation (just-in-time compilation)
@@ -90,6 +93,45 @@ WEB APIs
   - functionalities provided on engine but NOT a part of javascript
   - part of the runtime (DOM, Timers, Fetch API, etc.)
 
+
 callback queue
   - datastructure which contains callback functions from events that are ready to be executed
   - "event loop" takes callback function and puts them into the "call stack" to execute them
+
+
+global execution context
+  - created after compilation
+  - top level code (not inside any function) uses it
+  - compartment where compiled javascript code is executed
+  - only ONE global execution context
+  - for each function call, create an execution context which belongs to one global execution context
+
+
+  execution context (compartment of code), contains:
+
+    1. variable environment
+          let, const, var
+          functions
+          arguments object
+    2. scope chain
+    3. 'this' keyword
+
+    NOTE1 = arrow functions does not have 'argument object' and 'this' keyword
+          = they can use the closest parent function instead
+
+    NOTE2 = values only become known during execution
+
+    NOTE3 = the "execution context" on top of the "call stack" is the first one executed
+          = FIFO (first in first out) "call stack" operation
+          = top most "execution context" will need to be finished first before the previous is unpaused
+
+
+    ------- <call stack> -------
+
+    [execution context -> execute func2 within func1 which is currently paused]
+    [execution context -> execute func1]
+    [global execution context, only terminated if browser/process is closed/terminated]
+
+    ------- <call stack> -------
+
+    compiled & optimized code runs on an "execution context" within the "call stack"
