@@ -55,3 +55,83 @@ javascript:
 --- non-blocking event loop
 
   event loop execute at background thread and then returns it to the main thread once it's finished
+
+
+javascript engine
+  - executes javasript code
+  - dependent on browser
+  - example: v8 engine (google chrome browser & nodejs)
+
+  heap
+    unstructured memory pool where you store objects
+
+  call stack
+    where code is queued and executed via "execution context"
+
+
+compilation
+  source code is compiled into portable machine code (dependent on the target architecture), FAST
+
+
+interpretation
+  runs through source code and executes it line by line (converted to machine code first before executed), SLOW
+
+
+modern js engines
+  - use both compilation and interpretation (just-in-time compilation)
+  - JIT = convert to machine code once, execute immediately
+
+  1. parse code (read code) ->
+  2. create AST (abstract syntax tree), group relevant parts and check errors ->
+  3. compilation (to machine code using JIT) ->
+  4. execute (the machine code) ->
+  5. optimization (after 1st execution, 1st execution is mostly unoptimized) ->
+  6. [back to compilation step, recompile for next optimization step]
+
+
+WEB APIs
+  - functionalities provided on engine but NOT a part of javascript
+  - part of the runtime (DOM, Timers, Fetch API, etc.)
+
+
+callback queue
+  - datastructure which contains callback functions from events that are ready to be executed
+  - "event loop" takes callback function and puts them into the "call stack" to execute them
+
+
+global execution context
+  - created after compilation
+  - top level code (not inside any function) uses it
+  - compartment where compiled javascript code is executed
+  - only ONE global execution context
+  - for each function call, create an execution context which belongs to one global execution context
+
+
+  execution context (compartment of code), contains:
+
+    1. variable environment
+          let, const, var
+          functions
+          arguments object
+    2. scope chain
+    3. 'this' keyword
+
+    NOTE1 = arrow functions does not have 'argument object' and 'this' keyword
+          = they can use the closest parent function instead
+
+    NOTE2 = values only become known during execution
+
+    NOTE3 = the "execution context" on top of the "call stack" is the first one executed
+          = FIFO (first in first out) "call stack" operation
+          = top most "execution context" will need to be finished first before the previous is unpaused
+
+
+    ------- <call stack> -------
+
+    [execution context -> execute func2 within func1 which is currently paused]
+    [execution context -> execute func1]
+    [global execution context, only terminated if browser/process is closed/terminated]
+
+    ------- <call stack> -------
+
+    compiled & optimized code runs on an "execution context" within the "call stack"
