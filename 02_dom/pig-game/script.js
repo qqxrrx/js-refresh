@@ -50,6 +50,7 @@ const winConditionCheck = function (holdScoreElement, playerSectionElement) {
   if (Number(holdScoreElement.textContent) >= winConditionValue) {
     playerSectionElement.classList.add('player--winner')
     toggleButtonActivity(false)
+    toggleDiceVisible(false)
     return true
   }
   return false
@@ -68,6 +69,16 @@ const updateCurrentScore = function (currentScoreElement, diceRoll) {
   console.log(`p1 : ${score}`)
   currentScoreElement.textContent = score
 }
+
+const toggleDiceVisible = function (isVisible) {
+  if (isVisible) {
+    dice.classList.remove('hidden')
+  } else {
+    dice.classList.add('hidden')
+  }
+}
+
+toggleDiceVisible(false)
 
 btnNew.addEventListener('click', function () {
   playerOneHoldScore.textContent = '0'
@@ -89,6 +100,8 @@ btnRoll.addEventListener('click', function () {
   console.log(`dice roll: ${diceRoll}`)
 
   dice.src = `./dice-${diceRoll}.png`
+
+  toggleDiceVisible(true)
 
   if (diceRoll === 1) {
     if (firstPlayerTurn) {
