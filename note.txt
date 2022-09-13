@@ -10,3 +10,7 @@ javascript refresher
 - asynchronous
 - tooling
 - latest 2022 features
+
+
+divide big problem into smaller problems via a flow chart
+each rectangle process will be a function
