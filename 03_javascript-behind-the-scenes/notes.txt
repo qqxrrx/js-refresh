@@ -135,3 +135,36 @@ global execution context
     ------- <call stack> -------
 
     compiled & optimized code runs on an "execution context" within the "call stack"
+
+
+
+scope and scope chain
+
+  scope
+    - where to variables only live?
+    - defined as control of access
+    - scope of variable: region of code where variables can be accessed
+    - lexical scoping: scoping of variables are controlled where it is placed/positioned
+
+    - types of scope:
+
+        global scope = top level code (outside any function or block)
+                     = accessible everywhere
+
+        function scope = where functions create their own scope
+                       = variables only inside function
+                       = also called local scope
+
+        block scope (ES6) = everything between curly braces (example: if-block, for-loop)
+                          = only applied with 'let' and 'const' variables!
+                          = if you declare variable with 'var' it will default to global scope, just avoid 'var'
+                          = functions are blocked scope if 'use strict' is used
+
+  scope chain
+    - every scope has access to variables from all outer scopes / parent scopes
+    - variable lookup: if the engine tries to look upwards the scope chain
+    - outer scope / parent scope will not have access to child scope
+    - scope chain only works upwards (child to parent), not sidewards (sibling), not downwards (parent to child)
+    - nothing to do with order of execution context from call stack, scope chain is just access rules for variables
+    - execution context takes note of variables according to it's scope chain
+    - "reference error" if variable can't be found according to scope chain
