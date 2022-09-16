@@ -157,8 +157,8 @@ scope and scope chain
 
         block scope (ES6) = everything between curly braces (example: if-block, for-loop)
                           = only applied with 'let' and 'const' variables!
-                          = if you declare variable with 'var' it will default to global scope, just avoid 'var'
-                          = functions are blocked scope if 'use strict' is used
+                          = if you declare variable with 'var' it will ignore block level scoping they are within function scope, just avoid 'var'
+                          = functions are blocked scope if 'use strict' is used, if turned off then it will ignore block scope, always use 'use strict'
 
   scope chain
     - every scope has access to variables from all outer scopes / parent scopes
@@ -168,3 +168,4 @@ scope and scope chain
     - nothing to do with order of execution context from call stack, scope chain is just access rules for variables
     - execution context takes note of variables according to it's scope chain
     - "reference error" if variable can't be found according to scope chain
+    - if the variable we are looking for is already within the current scope, there will be no variable lookup
