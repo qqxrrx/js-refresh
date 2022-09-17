@@ -197,3 +197,9 @@ Temporal Dead Zone (TDZ)
   accessing variables before declaration is bad practice
   return ReferenceError if variable not initialized
   makes const variables actually work
+
+
+window object = global object of javascript in the browser
+
+'let' and 'const' does not create property in the window object
+'var' pollute the global scope
