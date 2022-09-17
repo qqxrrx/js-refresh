@@ -203,3 +203,25 @@ window object = global object of javascript in the browser
 
 'let' and 'const' does not create property in the window object
 'var' pollute the global scope
+
+
+'this' keyword
+  special variable for every execution context (each function)
+  NOT static, depends on how function is called
+  value is only assigned when function is actually called
+  NOT points to the function itself
+  NOT the variable environment
+
+  method (within an object):
+    - points to the owner of the function (object calling that method)
+
+  simple function call:
+    - 'use strict' = 'this' keyword will be undefined
+    - no 'use strict' = 'this' keyword will be the 'window' object
+
+  arrow function:
+    - 'this' will be the parent function surrounding it (lexical this)
+    - do not use arrow functions if you will need to use 'this'
+
+  event listener:
+    - 'this' will always point to the DOM element where it is attached to
