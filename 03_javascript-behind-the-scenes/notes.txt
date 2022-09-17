@@ -169,3 +169,31 @@ scope and scope chain
     - execution context takes note of variables according to it's scope chain
     - "reference error" if variable can't be found according to scope chain
     - if the variable we are looking for is already within the current scope, there will be no variable lookup
+
+
+
+Hoisting
+  make some types of variables accessible in code before they are actually declared
+  creation phase of execution context, code is scanned for variable declarations
+  each variable, a new property is created in the varible environment object
+  ~ created for mutual recursion
+
+  function declaration:
+    hoisted, initial value = actual function, block scope ('use strict', otherwise function scope)
+
+  var variables:
+    hoisted, initial value = undefined, function scope
+    in modern javascript avoid 'var'
+
+  let and const variables:
+    not hoisted, initial value = unintialized (can't access, temporal dead zone TDZ), block scope
+
+  function expressions, arrow function:
+    depends if using var/let/const = acts depends on the variable declaration
+
+
+Temporal Dead Zone (TDZ)
+  location where variables that are not yet initialized
+  accessing variables before declaration is bad practice
+  return ReferenceError if variable not initialized
+  makes const variables actually work
