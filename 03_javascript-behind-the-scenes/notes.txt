@@ -225,3 +225,26 @@ window object = global object of javascript in the browser
 
   event listener:
     - 'this' will always point to the DOM element where it is attached to
+
+
+Primitive (primitive types)
+  - types = Number, String, Boolean, Undefined, Null, Symbol, BigInt
+  - stored in call stack (within execution context where they are defined)
+  - variable is equal to the memory address within the call stack
+  - whenever we add a new value, we use a new address for the new value
+  - values in the address is immutable (that's why we create a new memory address)
+  - if we assign the value of a variable to another variable, the 2nd variable copies the memory address of the 1st variable carrying it's value
+
+
+Objects (reference types)
+  - types = Object Literal, Arrays, Functions
+  - stored in heap (serves as an unlimited memory pool)
+  - when we create a variable on the heap:
+      1. create value and memory address (on the heap)
+      2. the heap memory address will be a stored value inside the call stack
+      3. the call stack holds the address of the value which is the address inside the heap
+      4. objects might be too large to be stored on the call stack that's why we store it on the heap
+      5. the variable (identifier) will point on the memory address within the call stack (which in turn uses the value that was stored as the memory address from the heap)
+      6. that's why when we create an object and assign two variables, each object copy are updated (when we modify it)
+      7. two different identifiers that points on the same memory address on the heap
+  - 'const' immutability is only applicable on primitive types
