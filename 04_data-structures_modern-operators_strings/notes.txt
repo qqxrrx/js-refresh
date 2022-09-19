@@ -1,2 +1,4 @@
 destructuring:
   ES6 feature = unpack a complex data structure
+  for array destructuring, use []
+  for object destructuring, use {}
