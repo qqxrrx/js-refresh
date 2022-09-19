@@ -2,3 +2,18 @@ destructuring:
   ES6 feature = unpack a complex data structure
   for array destructuring, use []
   for object destructuring, use {}
+
+spread operator (= ...):
+  done on the right side of assignment (=) operator
+  "spread" ALL elements of array OR properties of object
+  works in ALL iterables (array, string, map, set)
+  works in objects for copying existing object or creating a new object
+  does not work inside template string argument `${}`
+
+rest pattern (... =)
+  done on the left side of assignment (=) operator
+  "collect" ALL elements of array OR properties of object
+  in arrays, takes the rest of the elements and does not include skipped elements
+  in objects, it will take the rest of the propertieds
+  always the last on the destructuring assignment
+  there can only be ONE rest pattern
