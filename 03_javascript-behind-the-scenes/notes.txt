@@ -43,7 +43,7 @@ javascript:
 
 --- dynamic
 
-  dynamically typed, don't assign data type... only known then JS executes the code
+  dynamically typed, don't assign data type... only known when javascript engine executes the code
   variable types change when you assign a new type with a few exceptions
 
 
@@ -128,9 +128,9 @@ global execution context
 
     ------- <call stack> -------
 
-    [execution context -> execute func2 within func1 which is currently paused]
-    [execution context -> execute func1]
-    [global execution context, only terminated if browser/process is closed/terminated]
+    3. [execution context -> execute func2 within func1 which is currently paused]
+    2. [execution context -> execute func1]
+    1. [global execution context, only terminated if browser/process is closed/terminated]
 
     ------- <call stack> -------
 
@@ -141,7 +141,7 @@ global execution context
 scope and scope chain
 
   scope
-    - where to variables only live?
+    - where do variables only live?
     - defined as control of access
     - scope of variable: region of code where variables can be accessed
     - lexical scoping: scoping of variables are controlled where it is placed/positioned
@@ -157,7 +157,7 @@ scope and scope chain
 
         block scope (ES6) = everything between curly braces (example: if-block, for-loop)
                           = only applied with 'let' and 'const' variables!
-                          = if you declare variable with 'var' it will ignore block level scoping they are within function scope, just avoid 'var'
+                          = if you declare variable with 'var' it will ignore block level scoping if they are within function scope, just avoid 'var'
                           = functions are blocked scope if 'use strict' is used, if turned off then it will ignore block scope, always use 'use strict'
 
   scope chain
@@ -175,7 +175,7 @@ scope and scope chain
 Hoisting
   make some types of variables accessible in code before they are actually declared
   creation phase of execution context, code is scanned for variable declarations
-  each variable, a new property is created in the varible environment object
+  each variable, a new property is created in the variable environment object
   ~ created for mutual recursion
 
   function declaration:
@@ -216,7 +216,7 @@ window object = global object of javascript in the browser
     - points to the owner of the function (object calling that method)
 
   simple function call:
-    - 'use strict' = 'this' keyword will be undefined
+    - 'use strict' = 'this' keyword will have a value of undefined
     - no 'use strict' = 'this' keyword will be the 'window' object
 
   arrow function:
