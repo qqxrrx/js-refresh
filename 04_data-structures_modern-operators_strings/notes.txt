@@ -1,0 +1,2 @@
+destructuring:
+  ES6 feature = unpack a complex data structure
