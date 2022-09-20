@@ -36,3 +36,8 @@ logical assignment operators (&&= , ||= , ??=)
   ||= if value is falsy then assign the 2nd value, however if we evaluate 0 (zero) it will be falsy (logical error!)
   solution is 'logical nullish assignment operator' ??=
   &&= if 1st and 2nd value is truthy then assign the 2nd value
+
+
+looping arrays (for-of loop)
+  loop elements of array
+  Array.entries() = return an array of arrays that has both index and value
