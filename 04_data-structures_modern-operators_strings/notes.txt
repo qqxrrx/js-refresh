@@ -23,3 +23,9 @@ rest pattern (... =)
 
 short circuit evaluation (&& and ||)
   || = if first value is truthy, then return it and skip the 2nd value
+
+
+nullish coalescing operator (??)
+  works with nullish values only (null and undefined)
+  does not include 0 or ''
+  therefore best to use with values expecting a 0 (zero) value being a valid value
