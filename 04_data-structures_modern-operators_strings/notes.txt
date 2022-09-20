@@ -23,9 +23,16 @@ rest pattern (... =)
 
 short circuit evaluation (&& and ||)
   || = if first value is truthy, then return it and skip the 2nd value
+  && = if first value is falsy, then return it and skip 2nd value otherwise return 2nd value
 
 
 nullish coalescing operator (??)
   works with nullish values only (null and undefined)
   does not include 0 or ''
   therefore best to use with values expecting a 0 (zero) value being a valid value
+
+
+logical assignment operators (&&= , ||= , ??=)
+  ||= if value is falsy then assign the 2nd value, however if we evaluate 0 (zero) it will be falsy (logical error!)
+  solution is 'logical nullish assignment operator' ??=
+  &&= if 1st and 2nd value is truthy then assign the 2nd value
