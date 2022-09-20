@@ -36,3 +36,18 @@ logical assignment operators (&&= , ||= , ??=)
   ||= if value is falsy then assign the 2nd value, however if we evaluate 0 (zero) it will be falsy (logical error!)
   solution is 'logical nullish assignment operator' ??=
   &&= if 1st and 2nd value is truthy then assign the 2nd value
+
+
+looping arrays (for-of loop)
+  loop elements of array
+  Array.entries() = return an array of arrays that has both index and value
+
+
+ES6 enhanced object literals
+  1. allow you to just use the actual declaration as the property name of the object
+  2. on functions:
+      from
+        functionName: function(params) {}
+      to
+        functionName(params) {}
+  3. compute/calculate property names (where the property names can be set during execution)
