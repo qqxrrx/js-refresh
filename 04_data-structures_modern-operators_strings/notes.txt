@@ -41,3 +41,13 @@ logical assignment operators (&&= , ||= , ??=)
 looping arrays (for-of loop)
   loop elements of array
   Array.entries() = return an array of arrays that has both index and value
+
+
+ES6 enhanced object literals
+  1. allow you to just use the actual declaration as the property name of the object
+  2. on functions:
+      from
+        functionName: function(params) {}
+      to
+        functionName(params) {}
+  3. compute/calculate property names (where the property names can be set during execution)
