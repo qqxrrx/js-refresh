@@ -28,8 +28,9 @@ short circuit evaluation (&& and ||)
 
 nullish coalescing operator (??)
   works with nullish values only (null and undefined)
-  does not include 0 or ''
+  does not include 0 or '' (which are falsy values)
   therefore best to use with values expecting a 0 (zero) value being a valid value
+  is the 1st part 'null' or 'undefined'? if yes then return the 2nd part otherwise return the 1st
 
 
 logical assignment operators (&&= , ||= , ??=)
@@ -51,3 +52,20 @@ ES6 enhanced object literals
       to
         functionName(params) {}
   3. compute/calculate property names (where the property names can be set during execution)
+
+
+Optional Chaining (?.)
+  avoids error if non existent property is used
+  simplifies checking of deeply nested properties
+  returns 'undefined' if property not found instead of TypeError
+  check left hand side of ?. if it exists
+
+
+Object.keys()
+  returns array of property name/key
+
+Object.values()
+  returns array of property values
+
+Object.entries()
+  returns array of combined property name/key & value array
