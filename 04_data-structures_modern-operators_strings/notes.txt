@@ -51,3 +51,10 @@ ES6 enhanced object literals
       to
         functionName(params) {}
   3. compute/calculate property names (where the property names can be set during execution)
+
+
+Optional Chaining (?.)
+  avoids error if non existent property is used
+  simplifies checking of deeply nested properties
+  returns 'undefined' if property not found instead of TypeError
+  check left hand side of ?. if it exists
