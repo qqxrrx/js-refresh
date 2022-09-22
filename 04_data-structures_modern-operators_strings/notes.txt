@@ -69,3 +69,13 @@ Object.values()
 
 Object.entries()
   returns array of combined property name/key & value array
+
+
+Sets (ES6)
+  collection of unique values
+  can't have any duplicates
+  pass an iterable (array, string) and it returns an iterable
+  no indexes, unorded
+  use case: store unique elements
+  remove duplicate values of arrays
+  not intended to replace array
