@@ -79,3 +79,8 @@ Sets (ES6)
   use case: store unique elements
   remove duplicate values of arrays
   not intended to replace array
+
+
+Maps (ES6)
+  map values to keys (key value pair)
+  keys of any type (including object and array)
