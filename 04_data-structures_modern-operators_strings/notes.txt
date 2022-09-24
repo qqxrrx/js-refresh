@@ -85,3 +85,35 @@ Maps (ES6)
   map values to keys (key value pair)
   keys of any type (including object and array)
   iterable
+
+
+sources of data
+- from source code
+- from ui
+- from external sources (APIs returning data in json format)
+
+
+which data structure to use?
+  Array or Set = simple list, no need to describe values
+  Object or Map = key/value pair, need to describe values using keys
+
+
+Array vs Set
+  Array
+    - when you need ordered list of values with duplicates
+    - need to manipulate data
+  Set
+    - requirement of unique values
+    - high performance for searching and deleting (faster than Array)
+    - remove duplicates from Array
+
+
+Object vs Map
+  Object
+    - representation of an object with functions
+    - when working with json (can convert to map)
+  Map
+    - better performance
+    - key can have data type (when you need keys that are not strings)
+    - easy to iterate
+    - easy to compute size
